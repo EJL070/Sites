@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bowlby+One+SC&family=Cabin+Sketch:wght@400;700&family=Coming+Soon&family=Fredoka+One&family=Itim&family=Lilita+One&family=Mali:wght@500&family=Nothing+You+Could+Do&family=Pacifico&family=Poiret+One&family=Walter+Turncoat&display=swap');
+:root{    
+    --alabaster: hsla(39, 38%, 91%, 1);
+    --jet: hsla(315, 4%, 20%, 1);
+    --metallic-seaweed: hsla(185, 48%, 38%, 1);
+    --mandarin: hsla(19, 100%, 58%, 1);
+    --fashion-fuchsia: hsla(322, 92%, 53%, 1);
+  background-image: url(Images/stairs.jpg);
+  background-position: 50% 60%;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid: max-content 1fr max-content/100%;
+    margin: 0;
+    place-items: stretch;
+    place-content: stretch;
+
+    overflow-x: hidden;
+  
+    
+}
+.material-symbols-outlined{
+    font-size: 10vmin;
+}
+header,
+main,
+footer {
+    width: 100%;
+    display: grid;
+}
+header{
+    grid:100% / 1fr 60px; 
+ 
+    padding-left:2%;
+    padding-right:2%;
+    box-sizing: border-box;
+}
+header h1{
+    box-sizing: border-box;
+    grid-area:1/1/2/3;
+    width:100%;
+    height:100%;
+    display: flex;
+    place-content: start;
+    place-items: center;
+    margin:0;
+    padding:0;
+    font-family: 'Bebas Neue';
+    font-size:15vmin;
+    color:white;
+    text-shadow: 1px 1px var(--mandarin),2px 2px var(--fashion-fuchsia),3px 3px var(--jet),4px 4px var(--fashion-fuchsia);
+    
+   
+
+}
+.menu{
+    grid-area:1/2/2/3;
+    width:10vmin;
+    height:10vmin;
+    place-self: center;
+    display: grid;
+    grid:repeat(2,1fr) / 100%;
+    place-content: center;
+    place-items: center;
+    font-family: 'Bebas Neue';
+    
+
+}
+
+.menu div{
+    height:50%;
+    width:100%;
+    background-color: white;
+    box-shadow: 1px 1px var(--jet),2px 2px var(--fashion-fuchsia);
+
+}
+
+@keyframes koe{
+    from{
+        display:flex;
+    }
+    to{
+        display:none;
+    }
+}
+@keyframes down{
+    from{
+
+        transform:rotate(0deg) ;
+    }
+    to{
+
+        transform:rotate(-45deg)  translateX(-3.8vmin);
+    }
+}
+@keyframes up{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(45deg) translateX(-3.8vmin);
+    }
+}
+@keyframes backup{
+
+    from{
+        transform:rotate(-45deg)  translateX(-17px);
+
+      
+    }
+    to{
+        transform:rotate(0deg)  translateX(0);
+       
+       
+    }
+
+}
+@keyframes backdown{
+
+    from{
+       
+        transform:rotate(45deg)  translateX(-17px);
+
+      
+    }
+    to{
+        transform:rotate(0deg)  translateX(0);
+       
+       
+    }
+
+}
+main{
+    grid:30px 1fr / 100%;
+    padding-left:2%;
+    padding-right:2%;
+    box-sizing: border-box;
+}
+.top{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid:100% / repeat(3,1fr);
+    gap:4px;
+    box-sizing: border-box;
+}
+
+.top div:first-child{
+    background-color: var(--metallic-seaweed);
+    height:100%;
+    width:100%;
+}
+.top div:nth-child(2){
+    background-color: var(--jet);
+    height:100%;
+    width:100%;
+}
+.top div:nth-child(3){
+    background-color: var(--fashion-fuchsia);
+  
+    height:100%;
+    width:100%;
+}
+#cover{
+    width:100%;
+    position: fixed;
+    right:0;
+    bottom:0;
+    background-color: hsla(315, 4%, 20%, 0.8);
+    animation:go 1s forwards;
+    display:grid;
+    place-content: start;
+    place-items: center;
+    font-size:4em;
+    font-family: 'Cabin Sketch';
+    color:white;
+    grid:repeat(3,1fr) / 100%;
+}
+.coverTitle{
+    background:hsla(185, 48%, 38%, 1);
+    width:100%;
+    display:flex;
+    place-items:  center;
+    place-content: center;
+    height:100%;
+}
+.coverTitle h2{
+    margin:0;
+    padding:0;
+  
+}
+.coverContent{
+    background-color: var(--fashion-fuchsia);
+    height:100%;
+    width:100%;
+    display:flex;
+    place-items: center;
+    place-content: center;
+}
+.coverFooter{
+   
+    height:100%;
+    width:100%;
+    display:grid;
+    grid:100%/repeat(2,50%);
+    place-items: center;
+    place-content: center;
+}
+.coverFooter div:first-child{
+    background-color: var(--mandarin);
+    height:100%;
+    width:100%;
+    display:flex;
+    place-items: center;
+    place-content: center;
+}
+.coverFooter div:nth-child(2){
+
+    height:100%;
+    width:100%;
+    display:flex;
+    place-items: center;
+    place-content: center;
+    background-color: var(--jet);
+}
+
+@keyframes go{
+    from{
+        transform:scaleY(0);
+    }
+    to{
+        transform:scaleY(1);
+    }
+}
+@media screen and (max-width:800px){
+    #cover{
+        grid:repeat(2,1fr) 2fr / 100%;
+
+    }
+    .coverFooter{
+        grid:repeat(2,50%) / 100%;
+    }
+}
