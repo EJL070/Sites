@@ -11,7 +11,7 @@
             const koe = (i=0) => {
                 if(parseInt(window.getComputedStyle(cover).height)>=window.innerHeight - (parseInt(window.getComputedStyle(header).height))){
                     cover.innerHTML = `<div class="coverTitle"><h2>Over</h2></div><div class="coverContent">Trials</div>
-                    <div class="coverFooter"><div>Contact</div><div>Faq</div></div>`;
+                    <div class="coverFooter"><div>Contact</div><div><a href="dots.html">Dots</a></div></div>`;
                     header.style.background = `var(--jet)`;
                 } else {
                     cover.style.height = parseInt(window.getComputedStyle(cover).height) + 10 + "px";
