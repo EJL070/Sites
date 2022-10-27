@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Bowlby+One+SC&family=Cabin+Sketch:wght@400;700&family=Coming+Soon&family=Fredoka+One&family=Itim&family=Lilita+One&family=Mali:wght@500&family=Nothing+You+Could+Do&family=Pacifico&family=Poiret+One&family=Walter+Turncoat&display=swap');
+:root{    
+    --alabaster: hsla(39, 38%, 91%, 1);
+    --jet: hsla(315, 4%, 20%, 1);
+    --metallic-seaweed: hsla(185, 48%, 38%, 1);
+    --mandarin: hsla(19, 100%, 58%, 1);
+    --fashion-fuchsia: hsla(322, 92%, 53%, 1);
+  background-image: url(stairs.jpg);
+  background-position: 50% 60%;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid: max-content 1fr max-content/100%;
+    margin: 0;
+    place-items: center;
+    place-content: center;
+
+    overflow-x: hidden;
+  
+}
+main{
+    width:70vmin;
+    aspect-ratio: 1/1;
+    border-radius:50%;
+  
+    animation:koe 2s infinite linear;
+
+    display:flex;
+    place-content: center;
+    place-items: center;
+    background-blend-mode: color-dodge;
+}
+
+main div{
+    width:70%;
+    aspect-ratio: 1/1;
+    border-radius:50%;
+    background: inherit;  
+    display:flex;
+    place-content: center;
+    place-items: center;
+    animation:koe 3s infinite linear; 
+
+}
+main div div {
+    width:70%;
+    aspect-ratio: 1/1;
+    border-radius:50%;
+    background: inherit;    
+    background-blend-mode: difference;
+    animation:koe 5s infinite linear; 
+    
+}
+@keyframes koe{
+    0%{
+        transform:rotateZ(0deg);
+        background:repeating-conic-gradient(
+            transparent 0,
+            transparent 1%,
+            yellow 0,
+            yellow 2%
+        ),
+        linear-gradient(
+            yellow 0,
+           red 20%,
+            purple 50%
+        ),
+        repeating-linear-gradient(
+            transparent 0,
+            transparent 10%,
+            white 0,
+            green 20%
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 5%,
+            grey 0,
+            red 12%
+        );
+        background-blend-mode: color-dodge;
+
+    }
+    50%{
+        background-blend-mode: difference;
+    }
+    100%{
+        transform:rotateZ(360deg);
+        background:repeating-conic-gradient(
+            transparent 0,
+            transparent 1%,
+            yellow 0,
+            yellow 10%
+        ),
+        linear-gradient(
+            yellow 0,
+            pink 10%,
+            purple 50%
+        ),
+        repeating-linear-gradient(
+            transparent 0,
+            transparent 10%,
+            white 0,
+            green 20%
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 5%,
+            grey 0,
+            green 9%
+        );
+        background-blend-mode: color-burn;
+}
+}
