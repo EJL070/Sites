@@ -77,6 +77,11 @@ header h1{
     box-shadow: 1px 1px var(--jet),2px 2px var(--fashion-fuchsia);
 
 }
+a{
+    color:unset;
+    text-decoration: none;
+}
+
 
 @keyframes koe{
     from{
